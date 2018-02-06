@@ -1,60 +1,112 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
-
-# Site settings
+# ---------------- #
+#   Main Configs   #
+# ---------------- #
+baseurl:
+url:
+date_format: "ordinal"
 title: OneWay
-brief-intro: 梦里走了许多路 醒来还是在床上
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site
+subtitle: "梦里走了许多路，醒来还是在床上"
+description: "apuar的个人博客"
+keywords: apuar, blog
+timezone: Asia/Shanghai
+encoding: "utf-8"
+side_bar_repo_limit: 3
 
-permalink: /:year/:month/:day/:title/
-
-# other links
-twitter_username:
-facebook_username:
-github_username:  apuar
+# ---------------- #
+#      Author      #
+# ---------------- #
+author: apuar
+organization:
+organization_url:
+github_username: apuar
+location: heze, China
 email: apuar5201@gmail.com
-weibo_username:
-zhihu_username:
-linkedIn_username:
-dribbble_username:
 
-description_footer: 记录点滴
+# ---------------- #
+#    Navigation    #
+# ---------------- #
+navs:
+  -
+    href: /
+    label: 首页
 
-# comments
-# two ways to comment, only choose one, and use your own short name
-# 两种评论插件，选一个就好了，使用自己的 short_name
-duoshuo_shortname: #hygblog
-disqus_shortname: apuar
+  -
+    href: /categories/
+    label: 分类
 
-# statistic analysis 统计代码
-# 百度统计 id，将统计代码替换为自己的百度统计id，即
-# hm.src = "//hm.baidu.com/hm.js?xxxxxxxxxxxx";
-# xxxxx字符串
-baidu_tongji_id:
-google_analytics_id: # google 分析追踪id
+  -
+    href: /wiki/
+    label: 维基
 
-# Build settings
+  -
+    href: /links/
+    label: 链接
+
+  -
+    href: /about/
+    label: 关于
+
+# ---------------- #
+#       RSS        #
+# ---------------- #
+subscribe_rss: /feed.xml
+
+# ---------------- #
+#      Jekyll      #
+# ---------------- #
 markdown: kramdown
-
 kramdown:
-  input: GFM
-  syntax_highlighter: rouge
+    input: GFM
+highlighter: rouge
+paginate: 8
+lsi: false
+quiet: false
+excerpt_separator: "\n\n"
+permalink: /:year/:month/:day/:title/
+gems:
+    - jekyll-github-metadata
+    - rouge
+#     - jekyll-html-pipeline
+    - jekyll-paginate
+    - jekyll-sitemap
+    - jekyll-feed
+    - jemoji
+#     - jekyll-mentions
+collections:
+    wiki:
+        output: true
+        permalink: /wiki/:path/
 
-# port
-# port: 1234
+repository: apuar/apuar.github.io
 
-# url
-category_dir: category/
-tag_dir: tag/
+# ---------------- #
+#      Comments    #
+# ---------------- #
+# support provider: disqus, gitment, gitalk
+comments_provider: gitalk
+# !!!重要!!! 请修改下面这些信息为你自己申请的
+# !!!Important!!! Please modify infos below to yours
+# https://disqus.com
+disqus:
+    username:
+# https://imsun.net/posts/gitment-introduction/
+gitment:
+    owner: apuar
+    repo: blog_comments
+    oauth:
+        client_id: bb1389241658a9390afa
+        client_secret: 6a57c070633ffad9f77b97696e21ccde88c8a6d2
+# https://github.com/gitalk/gitalk#install
+gitalk:
+    owner: apuar
+    repo: blog_comments
+    clientID: bb1389241658a9390afa
+    clientSecret: 6a57c070633ffad9f77b97696e21ccde88c8a6d2
+# 在使用其它评论组件时可点击显示 Disqus
+lazy_load_disqus : false
 
-# excerpt
-excerpt_separator: "\n\n\n\n"
-
-# paginate
-gems: [jekyll-paginate]
-paginate: 6
+# ---------------- #
+#    Analytics     #
+# ---------------- #
+google:
+    analytics_id:
