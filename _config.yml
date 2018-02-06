@@ -5,7 +5,7 @@ baseurl:
 url:
 date_format: "ordinal"
 title: OneWay
-subtitle: "梦里走了许多路，醒来还是在床上"
+subtitle: "梦里走了许多路 醒来还是在床上"
 description: "apuar的个人博客"
 keywords: apuar, blog
 timezone: Asia/Shanghai
@@ -16,10 +16,10 @@ side_bar_repo_limit: 3
 #      Author      #
 # ---------------- #
 author: apuar
-organization:
-organization_url:
+#organization:
+#organization_url:
 github_username: apuar
-location: heze, China
+#location: heze, China
 email: apuar5201@gmail.com
 
 # ---------------- #
