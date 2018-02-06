@@ -1,1 +1,1 @@
-﻿<apuar.github.io>
+apuar.github.io

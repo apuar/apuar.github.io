@@ -16,10 +16,10 @@ side_bar_repo_limit: 3
 #      Author      #
 # ---------------- #
 author: apuar
-#organization:
-#organization_url:
+organization:
+organization_url: https://apuar.github.io
 github_username: apuar
-#location: heze, China
+location: ShanDong, China
 email: apuar5201@gmail.com
 
 # ---------------- #
